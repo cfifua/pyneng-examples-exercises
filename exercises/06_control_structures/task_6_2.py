@@ -14,3 +14,9 @@
 mac = ['aabb:cc80:7000', 'aabb:dd80:7340', 'aabb:ee80:7000', 'aabb:ff80:7000']
 
 mac_cisco = []
+
+for item in mac:
+	replaced = item.replace(':','.')
+	mac_cisco.append(replaced)
+
+print(mac_cisco)

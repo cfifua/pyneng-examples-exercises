@@ -47,3 +47,8 @@ london_co = {
         'routing': True
     }
 }
+
+
+protocol = input('Enter device name: ')
+
+print(london_co.get(protocol))

@@ -44,3 +44,10 @@ london_co = {
         'routing': True
     }
 }
+
+protocol = input('Enter device name: ')
+
+keys = list(london_co[protocol].keys())
+param_name = input('Enter parameter name: (' + ', '.join(keys) + '): ')
+
+print(london_co.get(protocol).get(param_name))

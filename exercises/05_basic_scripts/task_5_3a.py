@@ -21,3 +21,21 @@ trunk_template = [
     'switchport trunk encapsulation dot1q', 'switchport mode trunk',
     'switchport trunk allowed vlan {}'
 ]
+
+tmpl_dict = {
+    'access': {
+        'access': 'access_template',
+        'question': 'Enter VLAN number: '
+    },
+    'trunk': {
+        'trunk': 'trunk_template',
+        'question': 'Enter allowed VLANs: '
+    }
+}
+
+interface_mode = input('Enter interface mode (access/trunk): ')
+interface_type = input('Enter interface type and number: ')
+
+vlans = input(tmpl_dict.get(interface_mode).get('question'))
+
+print('\n' + '\n'.join(vars()[tmpl_dict.get(interface_mode).get(interface_mode)]).format(vlans))

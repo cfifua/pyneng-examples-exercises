@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+    # -*- coding: utf-8 -*-
 '''
 Задание 5.2a
 
@@ -44,3 +44,8 @@ london_co = {
         'routing': True
     }
 }
+
+protocol = input('Enter device name: ')
+param_name = input('Enter parameter name: ')
+
+print(london_co.get(protocol).get(param_name))
